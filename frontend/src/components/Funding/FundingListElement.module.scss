@@ -1,0 +1,87 @@
+@import '../../styles/reset.scss';
+@import '../../styles/variable.scss';
+
+.funding-box {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 25%;
+  padding: 15px;
+  margin-bottom: 45px;
+  transition: all 0.2s;
+  &:hover {
+    scale: 1.03;
+  }
+  @include tablet() {
+    width: 33.333%;
+  }
+
+  @include mobile() {
+    width: 50%;
+    padding: 5px;
+  }
+  & img {
+    width: 100%;
+    min-height: 230px;
+    max-height: 230px;
+    height: 100%;
+
+    @include mobile(){
+      width: 100%;
+      min-height: 150px;
+      max-height: 150px;
+      height: 100%;
+  
+    }
+  }
+  .funding-info-box {
+    height: 100%;
+    max-height: 138px;
+    overflow: hidden;
+    & .list-title {
+      font-size: 1rem !important;
+      font-weight: bold;
+      margin: 10px 0;
+      min-height: 32px;
+    }
+    & .list-description {
+      margin: 10px 0;
+      font-size: 0.8rem !important;
+      color: #707070;
+      line-height: 1.2;
+      text-overflow: ellipsis;
+      min-height: 46px;
+    }
+  }
+
+  & .progress-info-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    & .money span:first-child {
+      color: red;
+      font-size: 0.85rem;
+    }
+    & .money span:last-child {
+      color: black;
+      font-size: 0.85rem;
+    }
+  }
+  & .progress-box {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(217, 217, 217, 1);
+  }
+  .progress-box::after {
+    content: '';
+    display: block;
+    width: 88%;
+    height: 5px;
+    background-color: $primary;
+  }
+}

@@ -1,0 +1,367 @@
+@import '../../../styles/reset.scss';
+@import '../../../styles/variable.scss';
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  padding-top: 77px;
+  font-family: NanumSquare !important;
+  background-color: rgba(255, 223, 193, 0.1);
+
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .content-inner {
+      max-width: 1160px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+
+      .profile-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+          flex-direction: column;
+        }
+
+        @include mobile {
+          flex-direction: column;
+        }
+
+        .banner {
+          width: 100%;
+          display: flex;
+          background: rgb(252, 34, 75);
+          background: linear-gradient(318deg, rgba(252, 34, 75, 1) 0%, rgba(236, 86, 1, 1) 21%, rgba(255, 134, 52, 1) 52%, rgba(255, 201, 165, 1) 100%);
+          background-size: 200% 200%;
+          animation: gradient 5s ease infinite;
+        }
+
+        @keyframes gradient {
+          0% {
+            background-position: 0 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0 50%;
+          }
+        }
+
+        .profile-card-img-div {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 6rem 2rem 4rem 3rem;
+
+          .profile-card-img-inner {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            overflow: hidden;
+            // border: 3px solid $primary;
+            box-shadow: rgba(161, 91, 0, 0.2) 0px 2px 8px;
+
+            & img {
+              width: 200px;
+              height: 200px;
+              border-radius: 100%;
+            }
+          }
+
+          @include tablet {
+            margin: 0 0 1rem 0;
+          }
+
+          @include mobile {
+            margin: 0 0 1rem 0;
+          }
+        }
+
+        .profile-card-info-div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: -30px;
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+          background-color: white;
+          z-index: 77;
+
+          @include tablet {
+            border: none;
+            margin: 0 0 0 2rem;
+          }
+
+          @include mobile {
+            border: none;
+            margin: 0 0 0 2rem;
+          }
+
+          .name {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            margin-top: 4rem;
+            font-size: 2rem;
+            font-weight: bold;
+
+            .follow-btn-div {
+              display: flex;
+              align-items: center;
+              margin-left: 1rem;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+
+            @include tablet {
+              margin: 0;
+              padding: 0;
+            }
+
+            @include mobile {
+              margin: 0;
+              padding: 0;
+            }
+
+            .setting {
+              font-size: 40px;
+              margin-left: 0.5rem;
+              color: rgba(0, 0, 0, 0.3);
+              transition: 2s;
+
+              &:hover {
+                cursor: pointer;
+                color: rgba(0, 0, 0, 0.6);
+                transform: rotate(180deg);
+              }
+
+              @include tablet {
+                font-size: 30px;
+              }
+
+              @include mobile {
+                font-size: 20px;
+              }
+            }
+          }
+
+          .profile-card-info-content {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 1rem 0 0 0;
+            padding: 1rem;
+
+            @include tablet {
+              margin: 0;
+              padding: 0;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+
+            @include mobile {
+              margin: 0;
+              padding: 0;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+
+            .profile-card-info-left {
+              display: flex;
+              flex-direction: column;
+
+              @include tablet {
+                margin: 1rem 0 0 0;
+              }
+
+              @include mobile {
+                margin: 1rem 0 0 0;
+              }
+
+              & svg {
+                font-size: 1.6rem;
+              }
+
+              .profile-card-info-item {
+                display: flex;
+                margin: 1rem 0;
+
+                & p {
+                  display: flex;
+                  align-items: center;
+                  margin: 0 0 0 1rem;
+                  font-size: 1.25rem;
+
+                  & span {
+                    margin: 0 0.5rem;
+                    font-weight: bold;
+                    color: $primary;
+                  }
+                }
+              }
+            }
+
+            .profile-card-info-right {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+
+              @include tablet {
+                margin-top: 1rem;
+              }
+
+              @include mobile {
+                margin-top: 1rem;
+              }
+
+              .profile-card-info-btn {
+                max-width: 300px;
+                height: 2rem;
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: none;
+                box-shadow: none;
+
+                @include mobile {
+                }
+
+                & p {
+                  margin-left: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .description-div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 0.5px solid rgb(225, 225, 225);
+
+        @include tablet {
+          width: 90%;
+          margin: 0;
+          padding: 0 0 2.5rem 0;
+        }
+
+        @include mobile {
+          width: 90%;
+          margin: 0;
+          padding: 0 0 2.5rem 0;
+        }
+
+        & p {
+          margin: 3rem auto 0 5%;
+          font-size: 1.25rem;
+        }
+
+        & pre {
+          white-space: pre-wrap;
+          width: 90%;
+          margin: 1rem 0 3rem;
+          color: rgba(0, 0, 0, 0.7);
+          line-height: 2rem;
+          font-size: 1.05rem;
+        }
+      }
+
+      .funding-div {
+        width: 95%;
+        margin-top: 3.5rem;
+
+        @include tablet {
+          margin-top: 2rem;
+          padding: 0rem;
+        }
+
+        @include mobile {
+          margin-top: 2rem;
+          padding: 0rem;
+        }
+
+        & h1 {
+          margin-left: 2rem;
+          font-size: 1.25rem;
+          color: rgba(0, 0, 0, 0.9);
+
+          & span {
+            color: $primary;
+          }
+        }
+
+        .funding-list {
+          margin: 1.5rem 0 10rem 0;
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+
+          & .nextLoading-box {
+            width: 100%;
+            left: 50%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 태그 영역 표시
+// .profile-card {
+//   border: 1px solid red;
+//   .profile-card-img-div {
+//     border: 1px solid orange;
+//   }
+//   .profile-card-info-div {
+//     border: 1px solid orange;
+//     .name {
+//       border: 1px solid rgb(186, 186, 0);
+//     }
+//     .profile-card-info-content {
+//       border: 1px solid rgb(186, 186, 0);
+//       .profile-card-info-left {
+//         border: 1px solid green;
+//       }
+//       .profile-card-info-right {
+//         border: 1px solid green;
+//       }
+//     }
+//   }
+// }
+// .description-div {
+//   border: 1px solid red;
+//   .funding-div {
+//     border: 1px solid red;
+//   }
+// }

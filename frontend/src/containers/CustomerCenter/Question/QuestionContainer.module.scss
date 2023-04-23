@@ -1,0 +1,75 @@
+@import '../../../styles/reset.scss';
+@import '../../../styles/variable.scss';
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: NanumSquare !important;
+
+  .content {
+    max-width: 1160px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .ques-btn-div {
+      display: flex;
+      justify-content: flex-end;
+      margin: 4rem 1rem 1.5rem 0;
+
+      .ques-btn {
+        padding: auto auto;
+        border-color: $primary;
+        color: $primary;
+        font-weight: bold;
+
+        &:hover {
+          background-color: rgba(236, 153, 75, 0.05);
+        }
+      }
+    }
+
+    .line {
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      background-color: inherit;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(236, 153, 75, 0.05);
+      }
+
+      .item-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .item-respond {
+        font-size: 1.125rem;
+        color: $primary;
+      }
+    }
+
+    .page-bar {
+      margin-top: 2rem;
+
+      & nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        & li {
+          width: auto;
+        }
+      }
+    }
+  }
+}
